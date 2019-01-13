@@ -22,6 +22,7 @@ def draw_circle(screen, delay, color , x, y):
     rect = circle.get_rect()
     rect.center = screen.get_rect().center
     pygame.draw.circle(circle, color, (x,y), 40)
+   
     
     screen.fill((0, 0, 0))
     screen.blit(circle,rect)
@@ -67,7 +68,7 @@ def draw_square(screen, delay, color , x, y):
     square = pygame.Surface((200, 200))
     rect = square.get_rect()
     rect.center = screen.get_rect().center
-    pygame.draw.rect(square, color, pygame.Rect(x, y, 100, 100))
+    pygame.draw.rect(square, color, pygame.Rect(x+60, y+60, 100, 100))
     
     screen.fill((0, 0, 0))
     screen.blit(square,rect)
@@ -130,7 +131,14 @@ pygame.init()
 screen = pygame.display.set_mode((800, 600))
 screen_rect = screen.get_rect()
 
+
+
+    
+    
+    
+
 for i in range(3):
+    
     draw_circle(screen, 3000, gold, x, y)
     draw_square(screen, 2000, blue, x, y)
     draw_circle(screen, 2000, green, x, y)
